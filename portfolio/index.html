@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tawseef Masud · Civil Engineering Design Portfolio</title>
+<meta name="description" content="Design portfolio of Tawseef Masud, civil engineering student at the University of Leeds: a raised walkway, a pavilion and a vertical barrier for St George's Field.">
+<meta property="og:title" content="Tawseef Masud · Civil Engineering Design Portfolio">
+<meta property="og:description" content="Raised walkway, pavilion and vertical barrier design projects — University of Leeds.">
+<meta property="og:image" content="assets/img/walkway-details.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4f1ea; --paper-2:#ebe6db; --ink:#1d2421; --ink-soft:#4a534f; --line:#c9c2b3;
+  --accent:#2f5246; --accent-ink:#f4f1ea; --tag:#e1dccf;
+  --serif:'Fraunces',Georgia,serif; --sans:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--paper-2) 1px,transparent 1px),linear-gradient(90deg,var(--paper-2) 1px,transparent 1px);
+  background-size:32px 32px;background-attachment:fixed}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;gap:16px}
+nav .name{font-family:var(--serif);font-size:20px;text-decoration:none;white-space:nowrap}
+nav ul{display:flex;gap:26px;list-style:none}
+nav ul a{text-decoration:none;color:var(--ink-soft)}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+header.hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.hero .kicker{color:var(--accent);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(42px,7vw,88px);line-height:1.02;letter-spacing:-.02em;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{margin-top:28px;max-width:58ch;font-size:19px;color:var(--ink-soft)}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end}
+.spec{border:1px solid var(--ink);background:var(--paper)}
+.spec div{display:grid;grid-template-columns:120px 1fr;border-bottom:1px solid var(--line);padding:10px 14px;gap:12px;font-size:15px}
+.spec div:last-child{border-bottom:0}
+.spec dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;padding:12px 20px;border:1px solid var(--ink);text-decoration:none;font-weight:500;font-size:15px;transition:.15s}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink)}
+
+/* index of projects */
+.index{padding:56px 0;border-bottom:1px solid var(--line)}
+.index-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+.card{text-decoration:none;background:var(--paper);border:1px solid var(--line);transition:.2s}
+.card:hover{border-color:var(--ink);transform:translateY(-3px)}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%;border-bottom:1px solid var(--line)}
+.card .body{padding:16px 18px 20px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:23px;margin:6px 0 4px}
+.card p{font-size:15px;color:var(--ink-soft)}
+
+/* project */
+section.project{padding:96px 0;border-bottom:1px solid var(--line)}
+.p-head{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;margin-bottom:40px}
+.p-num{font-family:var(--serif);font-weight:300;font-size:96px;line-height:.8;color:var(--accent)}
+.p-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-.015em}
+.p-head .mono{color:var(--ink-soft);margin-bottom:10px;display:block}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{background:var(--tag);padding:4px 10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.hero-img{border:1px solid var(--ink);background:#fff;cursor:zoom-in}
+figure{margin:0}
+figcaption{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);padding-top:8px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin:48px 0}
+.cols h3, .full h3{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
+.cols p+p{margin-top:12px}
+ul.list{list-style:none}
+ul.list li{padding:9px 0 9px 22px;border-bottom:1px dashed var(--line);position:relative}
+ul.list li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:1.5px;background:var(--accent)}
+ul.list b{font-weight:600}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:16px}
+.gallery figure{grid-column:span 2}
+.gallery .w3{grid-column:span 3}.gallery .w4{grid-column:span 4}.gallery .w6{grid-column:span 6}
+.gallery img{width:100%;border:1px solid var(--line);background:#fff;cursor:zoom-in;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);margin:40px 0;background:var(--paper)}
+.stats div{padding:18px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:var(--serif);font-weight:300;font-size:34px;line-height:1.1}
+.stats span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.calc{font-family:var(--mono);font-size:14px;background:var(--ink);color:#e9e6dd;padding:22px 24px;line-height:1.9;overflow-x:auto}
+.calc .ok{color:#9fd3b5}
+.boards{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.note{font-size:14px;color:var(--ink-soft);margin-top:14px;font-style:italic}
+
+/* skills/about */
+section.about{padding:96px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,5vw,54px);line-height:1.05;margin-bottom:22px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+footer{border-top:1px solid var(--ink);padding:28px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--ink-soft)}
+
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(18,22,20,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-width:100%;max-height:100%;object-fit:contain;background:#fff}
+#lb .x{position:absolute;top:14px;right:20px;color:#fff;font:400 30px var(--sans)}
+
+@media (max-width:860px){
+  nav ul{display:none}
+  .hero-grid,.cols,.about-grid,.skills{grid-template-columns:1fr;gap:32px}
+  .index-grid{grid-template-columns:1fr}
+  .p-head{grid-template-columns:1fr;gap:8px}
+  .p-num{font-size:64px}
+  .gallery{grid-template-columns:1fr}
+  .gallery figure,.gallery .w3,.gallery .w4,.gallery .w6{grid-column:auto}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats div:nth-child(2){border-right:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  header.hero{padding:56px 0 48px}
+  section.project,section.about{padding:64px 0}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="name" href="#top">Tawseef Masud</a>
+  <ul class="mono">
+    <li><a href="#walkway">Walkway</a></li>
+    <li><a href="#pavilion">Pavilion</a></li>
+    <li><a href="#barrier">Barrier</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap hero-grid">
+  <div>
+    <p class="mono kicker">Civil Engineering · University of Leeds</p>
+    <h1>Design work for <em>St George's Field</em>.</h1>
+    <p class="lede">Three group design projects for one historic site on the University of Leeds campus: a cable-stayed raised walkway, a sheltering pavilion and a replacement boundary wall. Each one was taken from site analysis and precedent study through to Revit models, construction details, cost estimates and foundation calculations.</p>
+    <div class="btns">
+      <a class="btn solid" href="#walkway">View projects</a>
+      <a class="btn" href="#about">About me</a>
+    </div>
+  </div>
+  <dl class="spec">
+    <div><dt>Name</dt><dd>Tawseef Masud</dd></div>
+    <div><dt>Course</dt><dd>BEng Civil Engineering</dd></div>
+    <div><dt>Module</dt><dd>CIVE1665 Integrated Design Project</dd></div>
+    <div><dt>Site</dt><dd>St George's Field, Leeds</dd></div>
+    <div><dt>Tools</dt><dd>Autodesk Revit, hand sketching, physical modelling</dd></div>
+  </dl>
+</div></header>
+
+<section class="index"><div class="wrap">
+  <p class="mono">Selected projects — 2025/26</p>
+  <div class="index-grid">
+    <a class="card" href="#walkway"><img src="assets/img/walkway-oblique.jpg" alt="Oblique Revit view of the cable-stayed walkway among trees" loading="lazy"><div class="body"><span class="mono">01 · Bridge / structure</span><h3>Raised Walkway</h3><p>A cable-stayed route across the field to first-floor level of the Sir William Henry Bragg Building.</p></div></a>
+    <a class="card" href="#pavilion"><img src="assets/img/pavilion-model.jpg" alt="1:100 physical model of the pavilion with coloured triangular roof panels" loading="lazy"><div class="body"><span class="mono">02 · Shelter / building</span><h3>Pavilion</h3><p>45 steel columns and tinted glass panels arranged, in plan, as St George's dragon.</p></div></a>
+    <a class="card" href="#barrier"><img src="assets/img/barrier-board.jpg" alt="Vertical barrier final design board" loading="lazy"><div class="body"><span class="mono">03 · Wall / foundation</span><h3>Vertical Barrier</h3><p>A new design to fill a 20 m gap in the field's stone boundary wall, with foundation calculations.</p></div></a>
+  </div>
+</div></section>
+
+<!-- ============ 01 WALKWAY ============ -->
+<section class="project" id="walkway"><div class="wrap">
+  <div class="p-head">
+    <div class="p-num">01</div>
+    <div>
+      <span class="mono">Project 4 · Group project · Jan–Feb 2026</span>
+      <h2>St George's Field Raised Walkway</h2>
+      <div class="tags"><span>Cable-stayed</span><span>Composite deck</span><span>Weathering steel</span><span>Revit</span><span>Accessible design</span></div>
+    </div>
+  </div>
+
+  <figure><img class="hero-img" src="assets/img/walkway-long.jpg" alt="Long perspective of the walkway crossing the field through the tree canopy"><figcaption>Long perspective: the route rising through the tree canopy to the building abutment</figcaption></figure>
+
+  <div class="cols">
+    <div>
+      <h3>The brief</h3>
+      <p>Design an accessible route across St George's Field, linking the existing path to first-floor level of the new Sir William Henry Bragg Building. The route has to rise over a protected masonry boundary wall without steps or steep ramps.</p>
+      <p>The constraints were a 2 m minimum clear width between handrails, no ground contact for 6 m from the building abutment, and an optional viewing platform no larger than 5 m².</p>
+    </div>
+    <div>
+      <h3>Our response</h3>
+      <p>We designed a gently graded cable-stayed walkway. Weathering-steel pylons carry stay cables down to a composite steel–concrete deck. The supports are a series of hollow triangular reinforced-concrete frames that echo the pylons.</p>
+      <p>Laminated toughened glass balustrades keep the views open across the field. A slight cross-fall drains water to slot drains at the deck edges, which controls ice and protects the concrete from freeze–thaw damage.</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <figure class="w3"><img src="assets/img/walkway-plan.jpg" alt="Plan view of the walkway" loading="lazy"><figcaption>Plan view with tree canopy and contours</figcaption></figure>
+    <figure class="w3"><img src="assets/img/walkway-details.jpg" alt="Structural component renders: pylon, deck and support" loading="lazy"><figcaption>Structural components: pylon, deck, support</figcaption></figure>
+    <figure class="w3"><img src="assets/img/walkway-siteplan.jpg" alt="Site plan at 1:1000" loading="lazy"><figcaption>Site plan, 1:1000</figcaption></figure>
+    <figure class="w3"><img src="assets/img/walkway-section.jpg" alt="Section 2 at 1:50" loading="lazy" style="max-height:470px;object-fit:contain"><figcaption>Section 2, 1:50: deck, columns, foundations</figcaption></figure>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h3>Structure &amp; materials</h3>
+      <ul class="list">
+        <li><b>Pylons:</b> weathering steel. It forms its own protective patina, so it needs no coating and less maintenance outdoors.</li>
+        <li><b>Deck:</b> steel beams with a concrete overlay, joined by welded shear studs so the two act as one composite section.</li>
+        <li><b>Supports:</b> hollow triangular RC frames. These save self-weight, can be inspected from inside and are bolted to the beams.</li>
+        <li><b>Balustrade:</b> laminated toughened glass on steel edge beams with mechanical clamps and a steel handrail.</li>
+        <li><b>Foundations:</b> concrete pads below each V-shaped steel column.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Construction sequence</h3>
+      <ul class="list">
+        <li>Prepare the site and cast the foundations for the deck and pylons.</li>
+        <li>Erect and brace the weathering-steel pylons and primary members.</li>
+        <li>Lift in the deck sections and fix them to the main structure.</li>
+        <li>Install and tension the steel stay cables, anchored at the pylons.</li>
+        <li>Fit the glass balustrade panels and the steel handrail.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div><b>2.23 m</b><span>Deck width</span></div>
+    <div><b>500 mm</b><span>Deck depth</span></div>
+    <div><b>3.5 m</b><span>Glass panel width</span></div>
+    <div><b>2</b><span>Cable-stayed pylons</span></div>
+  </div>
+
+  <div class="boards">
+    <a class="btn" href="assets/img/walkway-board.jpg" data-lb>View full presentation board ↗</a>
+  </div>
+</div></section>
+
+<!-- ============ 02 PAVILION ============ -->
+<section class="project" id="pavilion"><div class="wrap">
+  <div class="p-head">
+    <div class="p-num">02</div>
+    <div>
+      <span class="mono">Project 5 · Group B3 · Feb–Apr 2026</span>
+      <h2>St George's Field Pavilion</h2>
+      <div class="tags"><span>Steel frame</span><span>Glass canopy</span><span>Precast concrete</span><span>1:100 model</span><span>Cost estimate</span></div>
+    </div>
+  </div>
+
+  <figure><img class="hero-img" src="assets/img/pavilion-3d.jpg" alt="3D orthographic Revit render of the pavilion"><figcaption>3D orthographic, 1:100 (Revit)</figcaption></figure>
+
+  <div class="cols">
+    <div>
+      <h3>The brief</h3>
+      <p>Design an outdoor shelter on one general level that protects people from rain and gives some shelter from wind, without being fully enclosed. The covered floor area could be no more than 60 m², and any level changes had to use ramps rather than steps.</p>
+    </div>
+    <div>
+      <h3>Design concept</h3>
+      <p>The site is named after St George, so we drew on his legend. In plan, the triangular roof panels are positioned to form a dragon. Underneath, a curved two-level concrete base is shaped like a couch, making a place to relax or study that is sheltered but still open to the field.</p>
+      <p>Tall roof panels, up to 7 m high, keep the space feeling open. A grid of 45 slender solid-steel columns gives a sense of safety and support.</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <figure class="w4"><img src="assets/img/pavilion-model.jpg" alt="Physical model, first perspective" loading="lazy"><figcaption>Physical model, 1:100: built from card, bamboo, spaghetti and plastic wallets</figcaption></figure>
+    <figure><img src="assets/img/pavilion-site.jpg" alt="Site plan at 1:500" loading="lazy" style="max-height:340px;object-fit:contain;width:100%"><figcaption>Site plan, 1:500</figcaption></figure>
+    <figure class="w3"><img src="assets/img/pavilion-detail.jpg" alt="Glass panel construction detail at 1:5" loading="lazy"><figcaption>Glass panel connection detail, 1:5</figcaption></figure>
+    <figure class="w3"><img src="assets/img/pavilion-elevations.jpg" alt="North, south, east and west elevations at 1:200" loading="lazy"><figcaption>Elevations, 1:200</figcaption></figure>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h3>Construction method</h3>
+      <ul class="list">
+        <li>Soil investigation, vegetation clearance and safe excavation, including bore holes for the column foundations.</li>
+        <li>Pour reinforced foundations, then place the <b>precast</b> concrete base. Precasting cuts embodied carbon, and steel connectors join the blocks.</li>
+        <li>Place the precast back wall, set the columns through the base into their bore holes, and fit varnished timber seating panels.</li>
+        <li>Weld aluminium beams with steel ends to the columns, then fix the glass panels with spider clamps. All steel gets an anti-corrosion coating.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Key details</h3>
+      <ul class="list">
+        <li><b>Canopy:</b> tinted glass panels that absorb UV radiation, keeping the space underneath cool.</li>
+        <li><b>Floor:</b> two concrete levels at 450 mm and 900 mm, with timber panels raising seat height to 480 mm. Ramps are provided for access.</li>
+        <li><b>Columns:</b> solid steel, embedded 2000 mm into the ground to resist buckling and overturning.</li>
+        <li><b>Form:</b> triangular roof panels, which are inherently stiff and strong.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="full">
+    <h3>Material cost estimate</h3>
+    <div class="calc">
+Reinforced concrete  464.1 m³  @ £200/m³   £92,817<br>
+Steel                4373.1 m³ @ £75/m³    £327,983<br>
+Aluminium            1.2 m³    @ £5,994/m³ £7,163<br>
+Spruce timber        7.7 m³    @ £800/m³   £6,139<br>
+Glass                334.4 m²  @ £100/m²   £3,344<br>
+<span class="ok">TOTAL ESTIMATE                         £437,446</span>
+    </div>
+  </div>
+
+  <div class="gallery" style="margin-top:40px">
+    <figure class="w3"><img src="assets/img/pavilion-idea-1.jpg" alt="Initial design idea 1: solar-panel pavilion" loading="lazy"><figcaption>Initial idea 1: solar-roof shelter</figcaption></figure>
+    <figure class="w3"><img src="assets/img/pavilion-idea-2.jpg" alt="Initial design idea 2: hand-fan inspired sketch" loading="lazy"><figcaption>Initial idea 2: hand-fan canopy sketch</figcaption></figure>
+  </div>
+
+  <div class="boards">
+    <a class="btn" href="assets/img/pavilion-board-2.jpg" data-lb>Final design board ↗</a>
+    <a class="btn" href="assets/img/pavilion-board-1.jpg" data-lb>Initial ideas &amp; precedent board ↗</a>
+  </div>
+</div></section>
+
+<!-- ============ 03 BARRIER ============ -->
+<section class="project" id="barrier"><div class="wrap">
+  <div class="p-head">
+    <div class="p-num">03</div>
+    <div>
+      <span class="mono">Project 3 · Group project · Nov 2025–Jan 2026</span>
+      <h2>St George's Field Vertical Barrier</h2>
+      <div class="tags"><span>Masonry</span><span>Strip foundation</span><span>Wind loading</span><span>Overturning check</span><span>Revit section</span></div>
+    </div>
+  </div>
+
+  <figure><img class="hero-img" src="assets/img/barrier-board.jpg" alt="Vertical barrier final design presentation board" style="width:100%"><figcaption>Final design board: elevations, 3D views and foundation calculations</figcaption></figure>
+
+  <div class="cols">
+    <div>
+      <h3>The brief</h3>
+      <p>Part of the field's stone boundary wall has collapsed, leaving a 20 m gap. Rather than copying the original, the replacement had to express current technology, culture and design thinking.</p>
+      <p>It had to be 2.5–4 m tall, fit within a 20 × 5 m zone and have no openings. Its external face could be no more than 10° off vertical. The ground dips sharply at mid-length: the soil can safely bear 50 kN/m² at 1 m depth, and rock at 4.5 m can bear 250 kN/m².</p>
+    </div>
+    <div>
+      <h3>Our response</h3>
+      <p>Each team member developed an individual idea. We then combined the strongest parts of each into one final barrier, modelled it in Revit and developed it into a full presentation.</p>
+      <p>I produced an individual 2D Revit section through the wall and a foundation calculation. The calculation checks bearing pressure and overturning under the specified 1.2 kN/m² wind load.</p>
+    </div>
+  </div>
+
+  <div class="full">
+    <h3>Foundation calculation summary</h3>
+    <div class="calc">
+Wall height ............ 3.025 m<br>
+Strip foundation ....... 1.2 m wide × 0.4 m deep<br>
+Self-weight (wall + footing) ≈ 87.8 kN<br>
+Wind load .............. 1.2 kN/m² on the exposed face<br>
+Max bearing pressure ... ≈ 97 kN/m²  vs allowable 250 kN/m²  <span class="ok">✓ OK</span><br>
+Overturning: restoring moment ÷ overturning moment ≈ 4.5 &gt; 1  <span class="ok">✓ STABLE</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about"><div class="wrap about-grid">
+  <div>
+    <p class="mono" style="color:var(--accent);margin-bottom:16px">About</p>
+    <h2>Engineering that starts with the site.</h2>
+    <p>I'm a civil engineering student at the University of Leeds. These projects come from CIVE1665 Integrated Design Project, a year-long design studio. In it, small teams take a real campus site from analysis and precedent research through to scaled drawings, Revit models, construction details, costing and structural checks.</p>
+    <p style="margin-top:14px">I enjoy the point where an idea has to become buildable: choosing a material for how it weathers, working out how one element connects to the next, and checking a foundation can actually carry the load.</p>
+    <div class="btns">
+      <!-- EDIT: replace with your real email and LinkedIn URL -->
+      <a class="btn solid" href="mailto:your.email@example.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+    </div>
+  </div>
+  <div class="skills">
+    <div class="cols" style="display:block;margin:0"><h3>Software</h3><ul class="list"><li>Autodesk Revit</li><li>Image editing for presentation boards</li><li>Microsoft Office</li></ul></div>
+    <div class="cols" style="display:block;margin:0"><h3>Engineering</h3><ul class="list"><li>Foundation design &amp; bearing checks</li><li>Wind loading &amp; overturning</li><li>Composite &amp; cable-stayed structures</li><li>Material selection &amp; costing</li></ul></div>
+    <div class="cols" style="display:block;margin:0"><h3>Design</h3><ul class="list"><li>Site analysis</li><li>Precedent study</li><li>Hand sketching</li><li>Physical model making</li></ul></div>
+    <div class="cols" style="display:block;margin:0"><h3>Delivery</h3><ul class="list"><li>A1 presentation boards</li><li>Design reviews &amp; crits</li><li>Team collaboration</li><li>Construction sequencing</li></ul></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap mono">
+  <span>© 2026 Tawseef Masud</span>
+  <span>Group work produced with fellow students, University of Leeds School of Civil Engineering</span>
+</div></footer>
+
+<div id="lb" role="dialog" aria-label="Image viewer"><span class="x">×</span><img alt=""></div>
+<script>
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.addEventListener('click',e=>{
+  const t=e.target.closest('.hero-img,.gallery img,[data-lb]');
+  if(t){e.preventDefault();li.src=t.getAttribute('href')||t.src;li.alt=t.alt||'';lb.classList.add('on');}
+  else if(e.target.closest('#lb')){lb.classList.remove('on');}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
